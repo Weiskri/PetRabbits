@@ -1,0 +1,56 @@
+﻿@model PetRabbits.Models.RabbitModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RabbitModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNeutered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNeutered)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PetRabbits.Models.RabbitModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RabbitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RabbitAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RabbitBreed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNeutered)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RabbitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RabbitAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RabbitBreed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNeutered)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RabbitID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RabbitID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RabbitID })
+        </td>
+    </tr>
+}
+
+</table>

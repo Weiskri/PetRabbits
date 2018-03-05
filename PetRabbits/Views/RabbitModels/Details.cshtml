@@ -1,0 +1,50 @@
+﻿@model PetRabbits.Models.RabbitModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RabbitModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RabbitBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RabbitBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNeutered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNeutered)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RabbitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
