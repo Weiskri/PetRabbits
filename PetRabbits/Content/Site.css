@@ -22,3 +22,35 @@ select,
 textarea {
     max-width: 280px;
 }
+.table {
+    background-color: azure;
+    color: cadetblue;
+    font-family: 'Montsserat','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid navy;
+}
+a {
+    color: brown;
+}
+a:hover {
+    color: coral;
+}
+body {
+    background-color: beige;
+    color: darksalmon;
+}
+h2 {
+    font-family: 'Indie Flower';
+    font-size: 40px;
+}
+#bunny-1 {
+    width: 300px;
+    height: auto;
+    border: 3px solid darkgrey;
+}
+#bunny-2 {
+    width: 300px;
+    height: auto;
+    border: 3px solid darkgrey;
+    margin-top: 10px;
+}
